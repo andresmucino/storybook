@@ -1,6 +1,4 @@
-import React from "react";
-
-interface TypographyProps {
+interface AtomTypographyProps {
   title: string;
   backgroundColor?: string;
   size?: string;
@@ -25,14 +23,14 @@ export const bolds = {
   bold: "font-bold",
 };
 
-export const Typography: React.FC<TypographyProps> = ({
+export const AtomTypography = ({
   title,
   backgroundColor,
   size,
   color,
   underline,
   bold,
-}) => {
+}: AtomTypographyProps) => {
   const CONTAINER_TYPOGRAPGY = `block ${size} ${
     underline ? "underline underline-offset-1" : ""
   } ${bold}`;

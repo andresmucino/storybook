@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Typography, size, bolds } from "./Typography";
+import { AtomTypography, size, bolds } from "./Typography";
 
 export default {
-  title: "Titles",
-  component: Typography,
+  title: "Typography",
+  component: AtomTypography,
   argTypes: {
     size: {
       options: Object.keys(size),
@@ -23,14 +23,14 @@ export default {
       mapping: bolds,
     },
   },
-} as ComponentMeta<typeof Typography>;
+} as ComponentMeta<typeof AtomTypography>;
 
-const TemplateTypography: ComponentStory<typeof Typography> = (args) => (
-  <Typography {...args} />
+const TemplateAtomTypography: ComponentStory<typeof AtomTypography> = (args) => (
+  <AtomTypography {...args} />
 );
 
-export const Title = TemplateTypography.bind({});
-Title.args = {
+export const Typography = TemplateAtomTypography.bind({});
+Typography.args = {
   title: "Title",
   backgroundColor: "white",
   size: "text-base",
