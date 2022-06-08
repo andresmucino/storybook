@@ -4,6 +4,7 @@ interface AtomButtonProps {
   backgroundColor?: string;
   width?: string;
   onClick: () => void;
+  rounded?: boolean;
 }
 
 export const size = {
@@ -19,8 +20,11 @@ export const AtomButton = ({
   backgroundColor,
   width,
   onClick,
+  rounded,
 }: AtomButtonProps) => {
-  const BUTTON_CONTAINER = `uppercase rounded rounded-full p-3 shadow-lg transition ease-in-out delay-150 hover:scale-110 active:scale-100 ${width} `;
+  const BUTTON_CONTAINER = `uppercase ${
+    rounded ? "rounded-full" : "rounded"
+  }  p-3 shadow-lg active:scale-90 border-2 ${width} `;
 
   return (
     <button

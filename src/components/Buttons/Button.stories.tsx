@@ -23,4 +23,5 @@ Button.args = {
   color: "white",
   backgroundColor: "#9c2525",
   width: "w-24",
+  rounded: false
 };

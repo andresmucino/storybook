@@ -13,5 +13,6 @@ const TemplateAtomBadge: ComponentStory<typeof AtomBadge> = (args) => (
 
 export const Bagde = TemplateAtomBadge.bind({});
 Bagde.args = {
-    title: 'Admin'
+    title: 'Admin',
+    color: 'black'
 }
