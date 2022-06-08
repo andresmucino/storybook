@@ -3,6 +3,7 @@ interface AtomButtonProps {
   color?: string;
   backgroundColor?: string;
   width?: string;
+  onClick: () => void;
 }
 
 export const size = {
@@ -17,11 +18,16 @@ export const AtomButton = ({
   color,
   backgroundColor,
   width,
+  onClick,
 }: AtomButtonProps) => {
-  const BUTTON_CONTAINER = `uppercase rounded rounded-full p-3 ${width} `;
+  const BUTTON_CONTAINER = `uppercase rounded rounded-full p-3 shadow-lg transition ease-in-out delay-150 hover:scale-110 active:scale-100 ${width} `;
 
   return (
-    <button className={BUTTON_CONTAINER} style={{ color, backgroundColor }}>
+    <button
+      onClick={onClick}
+      className={BUTTON_CONTAINER}
+      style={{ color, backgroundColor }}
+    >
       {title}
     </button>
   );

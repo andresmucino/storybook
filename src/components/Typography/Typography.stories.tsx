@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { AtomTypography, size, bolds } from "./Typography";
 
 export default {
-  title: "Typography",
+  title: "Typographies",
   component: AtomTypography,
   argTypes: {
     size: {

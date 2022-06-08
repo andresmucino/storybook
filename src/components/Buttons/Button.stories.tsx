@@ -21,6 +21,6 @@ export const Button = TemplateAtomButton.bind({});
 Button.args = {
   title: "Button",
   color: "white",
-  backgroundColor: "#1ea7fd",
+  backgroundColor: "#9c2525",
   width: "w-24",
 };
