@@ -7,31 +7,17 @@ const color = "";
 export default {
   title: "Button Groups",
   component: AtomButtonGroup,
-  argTypes: {
-    color: { type: "color", options: { color } },
-  },
 } as ComponentMeta<typeof AtomButtonGroup>;
 
 const TemplateAtomButtonGroup: ComponentStory<typeof AtomButtonGroup> = (
   args
-) => (
-  <AtomButtonGroup>
-    <AtomButton
-      title={"hola"}
-      onClick={() => console.log("click")}
-      backgroundColor="blue"
-    />
-    <AtomButton
-      title={"hola"}
-      onClick={() => console.log("click")}
-      backgroundColor="blue"
-    />
-    <AtomButton
-      title={"hola"}
-      onClick={() => console.log("click")}
-      backgroundColor="blue"
-    />
-  </AtomButtonGroup>
-);
+) => <AtomButtonGroup {...args} />;
 
 export const ButtonGroup = TemplateAtomButtonGroup.bind({});
+ButtonGroup.args = {
+  buttonOne: 'One',
+  buttonTwo: 'two',
+  buttonThree: 'three',
+  color: 'white',
+  backgroundColor: 'blue'
+}

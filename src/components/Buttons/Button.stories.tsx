@@ -18,10 +18,11 @@ const TemplateAtomButton: ComponentStory<typeof AtomButton> = (args) => (
 );
 
 export const Button = TemplateAtomButton.bind({});
+
 Button.args = {
   title: "Button",
   color: "white",
   backgroundColor: "#9c2525",
   width: "w-24",
-  rounded: false
+  rounded: true,
 };
