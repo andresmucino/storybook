@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { AtomAvatar } from "./Avatar";
 
 export default {
-  title: "Avatars",
+  title: "Atoms/Avatars",
   componen: AtomAvatar,
   argTypes: {
     img: {

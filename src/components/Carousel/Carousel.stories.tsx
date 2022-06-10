@@ -16,11 +16,11 @@ const data = [
     title: "privalia-logo",
   },
   {
-    src: "https://p.kindpng.com/picc/s/198-1984328_sears-logo-png-png-download-sears-transparent-png.png",
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sears_Mexico_Logo.svg/1280px-Sears_Mexico_Logo.svg.png",
     title: "sears-logo",
   },
   {
-    src: "https://sitio.sanluis.gob.mx/turismo/images/places/petco%20global.jpg",
+    src: "https://i0.wp.com/elpoderdelasideas.com/wp-content/uploads/petco-detalles.png?resize=821%2C400",
     title: "petco-logo",
   },
   {

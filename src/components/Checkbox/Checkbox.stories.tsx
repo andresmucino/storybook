@@ -3,20 +3,21 @@ import React from "react";
 import { AtomCheckbox } from "./Checkbox";
 
 export default {
-  title: "Checkboxs",
+  title: "Atoms/Checkboxs",
   component: AtomCheckbox,
 } as ComponentMeta<typeof AtomCheckbox>;
 
-const TemplateAtomCheckbox: ComponentStory<typeof AtomCheckbox> = (args) => {
-  const [check, setCheck] = React.useState(false);
+export const TemplateAtomCheckbox: ComponentStory<typeof AtomCheckbox> = (
+  args
+) => {
+  const [checked, setChecked] = React.useState(false);
+
   return (
     <AtomCheckbox
-      checked={check}
-      color={"blue"}
-      onChange={(event) => setCheck(event.target.checked)}
-      disabled={false}
+      label={'checkbox'}
+      onChange={(e) => setChecked(e.target.checked)}
+      checked={checked}
+      disabled={args.disabled}
     />
   );
 };
-
-export const Checkbox = TemplateAtomCheckbox.bind({});

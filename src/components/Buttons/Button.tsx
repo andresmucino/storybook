@@ -23,8 +23,8 @@ export const AtomButton = ({
   rounded,
 }: AtomButtonProps) => {
   const BUTTON_CONTAINER = `uppercase ${
-    rounded ? "rounded-full" : "rounded"
-  }  p-3 shadow-lg active:scale-105 active:animate-pulse active:opacity-50 ${width} `;
+    rounded ? "rounded-full" : "rounded-md"
+  }  p-3 shadow-lg active:scale-105 active:drop-shadow-xl active:opacity-80 border-2 border-stone-300 ${width} `;
 
   return (
     <button

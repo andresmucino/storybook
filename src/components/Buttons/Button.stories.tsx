@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { AtomButton, size } from "./Button";
 
 export default {
-  title: "Buttons",
+  title: "Atoms/Buttons",
   component: AtomButton,
   argTypes: {
     width: {

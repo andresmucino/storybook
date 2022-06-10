@@ -1,28 +1,31 @@
 interface AtomCheckboxProps {
+  label?: string;
   checked: boolean;
   disabled?: boolean;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  color: string;
+  // color: string;
 }
 
 export const AtomCheckbox = ({
-  checked,
-  color,
   disabled,
+  label,
   onChange,
+  checked,
 }: AtomCheckboxProps) => {
-  const CHECKBOX = `form-checkbok h-4 w-4  cursor-pointer rounded focus:ring-transparent  ${
-    disabled ? "text-gray-600 text-opacity-50" : `text-${color}`
-  }`;
+  const CONTAINER_CHECKBOX = `flex items-center space-x-2.5`;
+  const INPUT_CHECKBOX = `w-5 h-5`;
+  const LABEL_CHECKBOX = `${disabled === true ? "text-gray-400" : ""}`;
 
   return (
-    <input
-      type="checkbox"
-      className={CHECKBOX}
-      aria-hidden="true"
-      checked={checked}
-      disabled={disabled}
-      onChange={onChange}
-    />
+    <div className={CONTAINER_CHECKBOX}>
+      <input
+        type="checkbox"
+        className={INPUT_CHECKBOX}
+        disabled={disabled}
+        onChange={onChange}
+        checked={checked}
+      />
+      <label className={LABEL_CHECKBOX}>{label}</label>
+    </div>
   );
 };

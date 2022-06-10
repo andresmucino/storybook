@@ -20,8 +20,11 @@ export const AtomButtonGroup = ({
   onClickTwo,
 }: AtomButtonGroupProps): JSX.Element => {
   const BUTTONS = "py-4 px-14 uppercase active:animate-pulse active:opacity-50";
+  const CONTAINER_BUTTONS_GROUP =
+    "inline-flex space-x-0 overflow-hidden border-2 border-stone-300 rounded-md divide-x divide-black";
+
   return (
-    <div className="inline-flex space-x-0 overflow-hidden border rounded-md divide-x divide-black">
+    <div className={CONTAINER_BUTTONS_GROUP}>
       <button
         className={BUTTONS}
         style={{ color, backgroundColor }}
