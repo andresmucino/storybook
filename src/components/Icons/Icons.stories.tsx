@@ -3,7 +3,7 @@ import { Icons, color, size } from "./Icons";
 import { paths } from "./Paths";
 
 export default {
-  title: "Icons",
+  title: "Atoms/Icons",
   Component: Icons,
   argTypes: {
     name: {

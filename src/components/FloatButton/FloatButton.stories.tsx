@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { FloatButton, size, color, backgroundColor } from "./FloatButton";
 
 export default {
-  title: "Float buttons",
+  title: "Atoms/Floatbuttons",
   component: FloatButton,
   argTypes: {
     size: {
