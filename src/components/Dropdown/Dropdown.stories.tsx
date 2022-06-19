@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MoleculeDropdown } from "./Dropdown";
 
 export default {
-  title: "Dropdowns",
+  title: "Molecules/Dropdowns",
   component: MoleculeDropdown,
 } as ComponentMeta<typeof MoleculeDropdown>;
 

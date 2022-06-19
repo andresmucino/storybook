@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { MoleculeListItemButton } from "./ListItemButton";
 
 export default {
-  title: "ListItemButtons",
+  title: "Molecules/ListItemButtons",
   component: MoleculeListItemButton,
 } as ComponentMeta<typeof MoleculeListItemButton>;
 
