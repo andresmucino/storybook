@@ -4,7 +4,7 @@ import { paths } from "../Icons/Paths";
 import { Inputs, iconPosition, color, labelColor } from "./Input";
 
 export default {
-  title: "Inputs",
+  title: "Atoms/Inputs",
   component: Inputs,
   argTypes: {
     iconName: {
