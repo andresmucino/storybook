@@ -82,7 +82,7 @@ export const MoleculeDropdown = ({
   );
 
   const CONTAINER =
-    "flex flex-col w-full bg-white relative h-32 w-32 justify-center";
+    "flex flex-col w-full relative bg-white relative h-32 w-32 justify-center";
 
   const OPTION_CONTAINER = `w-80 max-h-40 overflow-auto overflow-x-hidden ${
     open

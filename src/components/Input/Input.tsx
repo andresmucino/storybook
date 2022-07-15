@@ -72,7 +72,7 @@ export const Inputs: React.FC<InputProperties> = ({
   iconName,
 }) => {
   /** style clases */
-  const CONTAINER_INPUT = `flex flex-row w-full border py-3.5 justify-center w-full p-1 min-w-96 relative rounded ${
+  const CONTAINER_INPUT = `flex flex-row w-96 border py-3.5 justify-center p-1 min-w-96 relative rounded ${
     error ? "border-red-600" : readOnly ? "border-gray-300" : "border-gray-500"
   }`;
 

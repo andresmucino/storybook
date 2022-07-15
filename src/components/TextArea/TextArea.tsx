@@ -29,7 +29,7 @@ export const AtomTextArea: React.FC<AtomTextAreaProps> = ({
   helperText,
   showHelperText,
 }) => {
-  const CONTAINED_TEXTAREA = `border w-80 h-44 relative ${
+  const CONTAINED_TEXTAREA = `border w-80 h-44 p-2 relative ${
     error && "border-red-500"
   }`;
 

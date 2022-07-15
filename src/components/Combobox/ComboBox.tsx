@@ -1,65 +1,43 @@
-import React from 'react';
+import React from "react";
+import { Icons } from "../Icons/Icons";
+import { paths } from "../Icons/Paths";
 
-interface ComboBoxProperties {
+interface MoleculeComboBoxProps {
   onChange: (value: string) => void;
-  value: string;
-  options: Array<OptionProperties>;
-  error?: boolean;
-  readOnly?: boolean;
-  showLabel?: boolean;
-  helperText?: string;
-  placeholder: string;
-}
-
-interface OptionProperties {
+  options: Array<OptionsProps>;
   value: string;
 }
 
-const optionsDefault = [
-  {
-    value: 'envios',
-  },
-  {
-    value: 'paquete 1',
-  },
-  {
-    value: 'paquete 2',
-  },
-  {
-    value: 'option 4',
-  },
-];
+interface OptionsProps {
+  value: string;
+}
 
-export const AtomComboBox: React.FC<ComboBoxProperties> = ({
+export const MoleculeComboBox: React.FC<MoleculeComboBoxProps> = ({
   onChange,
-  value,
   options,
-  error,
-  readOnly,
-  showLabel,
-  helperText,
-  placeholder,
-}: ComboBoxProperties) => {
+  value,
+}) => {
   const [open, setOpen] = React.useState(false);
-  const [filterOptions, setFilterOptions] = React.useState(options);
+  const [filterOptions, setFilterOptions] =
+    React.useState<Array<OptionsProps>>(options);
   const [selected, setSelected] = React.useState(false);
 
-  /* styles */
-  const CONTAINER =
-    'flex flex-col w-80 bg-white relative items-center justify-center';
+  const CONTAINED_COMBOBOX = `border w-96 h-8 p-1 flex relative`;
 
-  const OPTION_CONTAINER = `w-80 max-h-40 overflow-y-auto ${
+  const INPUT_COMBOBOX = `resize-none outline-none w-full h-full focus:ring-transparent text-base `;
+
+  const OPTION_CONTAINER = `w-96 max-h-40 overflow-auto overflow-x-hidden ${
     open
-      ? 'block transition-all ease-in-out duration-700 h-auto'
-      : 'hidden max-h-0'
-  } items-start justify-start absolute z-10 top-12 border rounded-lg border-gray-400 bg-white`;
+      ? "block transition-all ease-in-out duration-150 h-auto"
+      : "hidden max-h-0"
+  } items-start justify-start absolute z-40 top-10 border rounded-lg border-gray-300 bg-white`;
 
-  const OPTION =
-    'flex flex-start text-left w-full h-10 hover:transition-opacity duration-500 hover:bg-gray-300 cursor-pointer px-5  items-center justify-start outline-none focus:outline-none';
+  const OPTIONS =
+    "flex flex-start text-left w-full h-10 hover:bg-gray-200 ml-0 hover:transition-opacity duration-500 cursor-pointer px-1 justify-start py-1 items-center";
 
   const onChangeInput = (value: string) => {
     onChange(value);
-    if (value !== '' && !selected) {
+    if (value !== "" && !selected) {
       const result = options.filter((object) => {
         const autoCompleteResult = object.value.toLowerCase();
         const keyword = value.toLowerCase();
@@ -82,38 +60,29 @@ export const AtomComboBox: React.FC<ComboBoxProperties> = ({
   }, [open]);
 
   return (
-    <div className={CONTAINER}>
+    <div className={CONTAINED_COMBOBOX}>
       <input
-        placeholder={placeholder}
-        // icon={open && !readOnly ? 'TriangleDropUp' : 'TriangleDropDown'}
-        // iconPosition={'right'}
-        // label={placeholder}
+        type="text"
+        className={INPUT_COMBOBOX}
+        onChange={(e) => onChangeInput(e.target.value)}
         value={value}
-        // showLabel={showLabel}
-        // error={error}
-        readOnly={readOnly}
-        // helperText={helperText}
-        onChange={() => onChangeInput(value)}
-        // onClickIcon={() => {
-        //   if (!readOnly) {
-        //     setOpen(!open);
-        //   }
-        // }}
       />
+      <button onClick={() => setOpen(!open)}>
+        <Icons name={open ? paths.ExpandMore : paths.ExpandLess} />
+      </button>
 
       <div className={OPTION_CONTAINER}>
-        {filterOptions?.map((item, index) => (
+        {filterOptions.map((item, index) => (
           <button
-            className={OPTION}
-            key={index}
+          key={index}
+            className={OPTIONS}
             onClick={() => {
               onChange(item.value);
               setOpen(false);
-              setSelected(true);
               setFilterOptions(options);
             }}
           >
-            {item.value}
+            <span>{item.value}</span>
           </button>
         ))}
       </div>

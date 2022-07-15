@@ -1,11 +1,8 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { AtomButton } from "../../components/Buttons/Button";
 import { AtomButtonGroup } from "./ButtonGroup";
 
-const color = "";
-
 export default {
-  title: "Button Groups",
+  title: "Molecules/Button Groups",
   component: AtomButtonGroup,
 } as ComponentMeta<typeof AtomButtonGroup>;
 

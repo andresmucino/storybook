@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AtomTextArea } from "./TextArea";
 
 export default {
-  title: "TextAreas",
+  title: "Atoms/TextAreas",
   component: AtomTextArea,
 } as ComponentMeta<typeof AtomTextArea>;
 
@@ -14,16 +14,16 @@ export const TextArea: ComponentStory<typeof AtomTextArea> = (args) => {
     <AtomTextArea
       value={value}
       onChange={(value) => setValue(value)}
-      placeholder={args.placeholder}
+      placeholder={args.placeholder || "placeholder"}
       disabled={args.disabled}
       readOnly={args.readOnly}
       required={args.required}
       name={args.name}
       showLabel={args.showLabel}
-      label={args.label}
+      label={args.label || "label"}
       error={args.error}
       showHelperText={args.showHelperText}
-      helperText={args.helperText}
+      helperText={args.helperText || "helper text"}
     />
   );
 };
