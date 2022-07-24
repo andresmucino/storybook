@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
-interface MoleculeStepperProps {
-  steps: Array<StepProps>;
+interface MoleculeVerticalStepperProps {
+  steps: Array<VerticalStepProps>;
   currentStep: number;
 }
 
-export interface StepProps {
+export interface VerticalStepProps {
   description: string;
   complete?: boolean;
 }
 
-export const MoleculeStep: React.FC<MoleculeStepperProps> = ({
+export const MoleculeVerticalStep: React.FC<MoleculeVerticalStepperProps> = ({
   currentStep,
   steps,
 }) => {
-  const [steppers, setStepers] = useState<Array<StepProps>>([]);
-  const stepsStateReference = React.useRef<Array<StepProps>>();
+  const [steppers, setStepers] = useState<Array<VerticalStepProps>>([]);
+  const stepsStateReference = React.useRef<Array<VerticalStepProps>>();
 
-  const updateSteps = (steps: Array<StepProps>, stepNumber: number) => {
+  const updateSteps = (steps: Array<VerticalStepProps>, stepNumber: number) => {
     const newSteps = [...steps];
     let stepCounter = 0;
 
@@ -51,7 +51,7 @@ export const MoleculeStep: React.FC<MoleculeStepperProps> = ({
 
   React.useEffect(() => {
     const stepState = steps.map((item, index) => {
-      const stepObject: StepProps = {
+      const stepObject: VerticalStepProps = {
         description: "",
         complete: false,
       };
