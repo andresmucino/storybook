@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MultiSelect } from "./Multiselectable";
 
 export default {
-  title: "Multi",
+  title: "Molecules/MultiSelectables",
   component: MultiSelect,
 } as ComponentMeta<typeof MultiSelect>;
 

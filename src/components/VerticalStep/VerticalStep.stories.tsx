@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { MoleculeVerticalStep } from "./VerticalStep";
 
 export default {
-  title: "Molecules/VerticalSteppers",
+  title: "Molecules/Steppers",
   component: MoleculeVerticalStep,
 } as ComponentMeta<typeof MoleculeVerticalStep>;
 

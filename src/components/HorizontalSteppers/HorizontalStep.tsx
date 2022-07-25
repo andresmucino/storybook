@@ -91,7 +91,7 @@ export const MoleculeHorizontalStep: React.FC<MoleculeHorizontalStepsProps> = ({
       <div
         className={
           index !== steppers.length - 1
-            ? `w-32 h-3 border-b-8 mt-3 ${
+            ? `w-36 h-3 border-b-8 mt-3 ${
                 !item.complete ? "border-blue-600" : "border-green-600"
               } relative left-8`
             : ""

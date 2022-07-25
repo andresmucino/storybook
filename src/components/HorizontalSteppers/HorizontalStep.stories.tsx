@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { MoleculeHorizontalStep } from "./HorizontalStep";
 
 export default {
-  title: "HorizontalSteps",
+  title: "Molecules/Steppers",
   component: MoleculeHorizontalStep,
 } as ComponentMeta<typeof MoleculeHorizontalStep>;
 
